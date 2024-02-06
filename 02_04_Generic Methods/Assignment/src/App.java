@@ -4,7 +4,9 @@ public class App {
         Property<Double> number2 = new Property<Double>(2.0);
 
         System.out.println("number1 > number2" + number1.isGreaterThan(number2));
-        System.out.println("number1 > number2" + number1.isLessThan(number2));
+        System.out.println("number1 < number2" + number1.isLessThan(number2));
+        System.out.println("number1 = number2" + number1.isEqual(number2));
+
         //TODO:  repeat for equals, notequals, greaterThanorequals, less than or equals
 
     }
