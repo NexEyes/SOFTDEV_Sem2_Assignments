@@ -38,7 +38,7 @@ public class Property<T extends Comparable<T>> implements Inequality<T> {
 
     @Override
     public boolean isEqual(T other) {
-        if (t.compareTo(other) != -1) {
+        if (t.compareTo(other) == isEqual(null)) {
             return true;
         } else {
             return false;
