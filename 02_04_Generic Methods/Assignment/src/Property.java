@@ -40,7 +40,7 @@ public class Property<T extends Comparable<T>> implements Inequality<T> {
     public boolean isEqual(Property<T> other) {
             return false;
         }
-    }
+    
 
     @Override
     public boolean isNotEqual(Property<T> other) {
@@ -64,5 +64,6 @@ public class Property<T extends Comparable<T>> implements Inequality<T> {
             return false;
         }
     }
+}
 
 
