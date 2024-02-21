@@ -14,6 +14,8 @@ public class App {
         //Lambda notation examples
         Function<Integer, Integer> add5 = (num) -> num + 5;
         Function<Integer, Integer> div2 = (num) -> num / 2;
+        Function<Integer, Integer> sub5 = (num) -> num - 5;
+        Function<Integer, Integer> times5 = (num) -> num * 5;
         // Function<Integer, Integer> add5Divide2 = (num) -> {
         //     num = num + 5;
         //     num = num / 5;
@@ -21,10 +23,13 @@ public class App {
         // };
 
         Function<Integer, Integer> add5Divide2UsingAndThen = add5.andThen(div2);
+        Function<Integer, Integer> sub5Times5AndThen = sub5.andThen(times5);
 
         Optional<Integer> myIntOption = Optional.of(3);
+        Optional<Integer> testNumber = Optional.of(1);
 
         Optional<Integer> myIntAdd5Option = myIntOption.map(add5);
+        Optional<Integer> testResult = testNumber.map(sub5Times5AndThen);
         Optional<Integer> myIntAdd5Div2Option = myIntOption.map(add5Divide2UsingAndThen);
         System.out.println(myIntOption);
         System.out.println(myIntAdd5Option);
