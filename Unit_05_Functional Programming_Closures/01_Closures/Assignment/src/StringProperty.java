@@ -6,7 +6,7 @@ public class StringProperty {
 
     private int value;
 
-    private StringProperty(int value) {
+    private StringProperty(String value2) {
         this.value = value;
     }
 
